@@ -1,0 +1,86 @@
+html {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+}
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    background: url("./pic1.jpg") no-repeat, linear-gradient(#415E64, #4A7079, #2D3F43, #486D75, #436169);
+    background-size: 100%;
+
+}
+
+.content {
+    height: 100%;
+    padding: 10px;
+    margin: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+h1 {
+    position: relative;
+    font-size: 3rem;
+    font-family: cursive;
+    padding: 0px 15px;
+}
+
+p {
+    font-size: larger;
+    font-family: 'Ubuntu';
+}
+
+.button {
+    align-self: center;
+}
+
+button {
+    font-family: 'Ubuntu';
+    font-size: large;
+    display: block;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgb(208, 236, 246);
+}
+
+button:hover {
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+    background-color: rgb(17, 162, 210);
+    padding: 0;
+    transition: all;
+    transition-duration: .3s;
+}

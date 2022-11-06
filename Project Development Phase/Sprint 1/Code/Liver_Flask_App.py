@@ -60,9 +60,6 @@ class LoginForm(FlaskForm):
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    if 'admin' in session:
-        return redirect(url_for('home'))
-    
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -71,7 +68,7 @@ def login():
                 login_user(user)
                 session['admin'] = request.form['username'] 
                 return redirect(url_for('home'))
-    
+
     return render_template('login.html', form=form)
 
 

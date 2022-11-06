@@ -22,38 +22,44 @@
 </head>
 
 <body>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        
-        {% for field, errors in form.errors.items() %}
-        {{ ', '.join(errors) }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        {% endfor %}
-        
-    </div>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+            <img src="/static/icon.jpg" alt="icon" height="70px" width="100px">
+
+                <h2>
+                    Liver Disease Predictor
+                </h2>
+            </a>
+        </div>
+    </nav>
+
+
+    {% if form.errors|length > 0 %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {% for field, errors in form.errors.items() %}
+                {{ ', '.join(errors) }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
     <div class="wrapper fadeInDown">
         <div id="formContent">
-            <!-- Tabs Titles -->
-
-            <!-- Icon -->
             <div class="fadeIn first">
                 <h2>Register</h2>
             </div>
 
-            <!-- Login Form -->
-            <!-- <form>
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In">
-            </form> -->
             <form method="POST" action="">
                 {{ form.hidden_tag() }}
                 {{ form.username }}
                 {{ form.password }}
                 {{ form.submit }}
             </form>
-            <!-- Remind Passowrd -->
+            
             <div id="formFooter">
                 <a href="{{ url_for('login') }}">Already have an account? Log In</a>
             </div>

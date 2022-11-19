@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="/static/predict.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1> Liver Disease Prediction</h1>
+
+        <form class="container" action="/data_predict" method="post">
+            <ul class="formfields">
+                <li class="fields">
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" placeholder=" Enter your age : 3 - 90" required>
+                </li>
+                <li class="fields">
+                    <label for="gender">Gender:</label>
+                    <div class="gender_selection">
+                        <label for="Male">Male:</label>
+                        <input type="radio" id="Male" name="gender" required>
+                        <label for="Female">Female:</label>
+                        <input type="radio" id="Female" name="gender">
+                    </div>
+                </li>
+                <li class="fields">
+                    <label for="tb">Total Bilirubin:</label>
+                    <input type="text" id="tb" name="tb" placeholder=" 0 - 80 " required>
+                </li>
+                <li class="fields">
+                    <label for="db">Direct Bilirubin:</label>
+                    <input type="text" id="dbi" name="dbi" placeholder=" 0 - 20 " required>
+                </li>
+                <li class="fields">
+                    <label for="ap">Alkaline Phosphotase:</label>
+                    <input type="text" id="ap" name="ap" placeholder=" 50 - 2200 " required>
+                </li>
+                <li class="fields">
+                    <label for="aa1">Alamine AminoTransferase:</label>
+                    <input type="text" id="aa1" name="aa1" placeholder=" 10 - 2000 " required>
+                </li>
+                <li class="fields">
+                    <label for="aa2">Aspartate AminoTransferase:</label>
+                    <input type="text" id="aa2" name="aa2" placeholder=" 10 - 5000 " required>
+                </li>
+                <li class="fields">
+                    <label for="tp">Total Proteins:</label>
+                    <input type="text" id="tp" name="tp" placeholder=" 0 - 10 " required>
+                </li>
+                <li class="fields">
+                    <label for="a">Albumin:</label>
+                    <input type="text" id="a" name="a" placeholder=" 0 - 10 " required>
+                </li>
+                <li class="fields">
+                    <label for="agr">Albumin Globulin Ratio:</label>
+                    <input type="text" id="agr" name="agr" placeholder=" 0 - 10" required>
+                </li>
+            </ul>
+            <div class="buttons">
+                <form action="/">
+                    <button class="button"> Go Back </button>
+                </form>
+                <input type="submit" class="button" value="Predict">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

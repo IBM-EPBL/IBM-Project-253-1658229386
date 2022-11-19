@@ -1,0 +1,79 @@
+html {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    background: url("./pic1.jpg") no-repeat, linear-gradient(#415E64, #4A7079, #2D3F43, #486D75, #436169);
+}
+
+
+body {
+    margin: 40px;
+    padding: 0%;
+    width: 90%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    align-self: center;
+}
+
+button {
+    font-family: 'Ubuntu';
+    font-size: large;
+    display: block;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgb(208, 236, 246);
+}
+
+button:hover {
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+    background-color: rgb(17, 162, 210);
+    padding: 0;
+    transition: all;
+    transition-duration: .3s;
+}
+
+.container {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards {
+    width: 33%;
+    height: 100%;
+    margin: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #CFF5E7;
+}
+
+p {
+    color: aliceblue;
+    font-size: larger;
+}
+
+.description{
+    color: #000;
+}
